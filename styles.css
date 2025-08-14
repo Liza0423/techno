@@ -1,1 +1,209 @@
+        body {
+            margin: 0;
+            font-family: Rubik, sans-serif;
+            box-sizing: border-box;
+        }
+
+        .rubik-regular {
+            font-family: "Rubik", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+        
+        .header {
+            background-color: #005baa;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .contact-info img {
+            width: 16px;
+            height: 16px;
+            vertical-align: middle;
+        }
+
+        .header-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .center-logo-title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 10px;
+        }
+
+        .logo-img {
+            max-height: 250px;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 7%;
+        }
+
+        .main-title {
+            left: 50%;
+            margin: 20px auto;
+        }
+
+        .phone-btn {
+            background-color: #0077ff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 7px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            position: relative;
+        }
+        .phone-btn:hover { background-color: #e55c00; }
+            @media (max-width: 768px) {
+            .header-container { flex-direction: column; gap: 15px; }
+            .main-title { position: static; transform: none; order: 2; }
+            .logo-section { order: 1; }
+            .phone-btn { order: 3; }
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.2em;
+        }
+        .cta-button {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        .service {
+            flex: 1 1 200px;
+            margin: 10px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .reviews { background: #f9f9f9; padding: 20px 0; }
+        .review {
+            margin: 15px 0;
+            padding: 10px;
+            border-left: 3px solid #e74c3c;
+        }
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .contacts { margin: 20px 0; }
+        .price-section {
+            margin: 30px 0;
+            padding-left: 10px;  /* будет перекрыто новым стилем ниже */
+            padding-right: 10px;
+        }
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        .price-table th, .price-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        .price-table th { background: #f4f4f4; }
+        .price-table tr:nth-child(even) { background: #f9f9f9; }
+        .price-title {
+            color: #e74c3c;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 5px;
+        }
+        .note { font-size: 0.9em; color: #777; margin-top: 5px; }
+        .social-links { margin-top: 20px; }
+        .social-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: white;
+            background-color: #e13030;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .social-links a:first-child { background-color: #000000; }
+        .social-links a:hover { opacity: 0.8; }
+
+        .callback-form-section {
+            margin: 30px 0;
+            padding: 20px;
+            background: #f4f4f4;
+            border-radius: 8px;
+        }
+
+        .why-us {
+            padding-left: 16px;
+            color: #e74c3c;
+        }
+        .callback-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .callback-form label { font-weight: bold; }
+        .callback-form input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+        .callback-form button {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .callback-form button:hover { background-color: #c0392b; }
+
+        .map-wrap { position: relative; width: 100%; aspect-ratio: 16 / 9; }
+        .map-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+<!-- ДОПОЛНИТЕЛЬНЫЙ блок стилей с нужными правками -->
+        /* Общий контейнер контента (не трогаем .header) */
+        .container {
+            width: min(1200px, 92%);
+            margin: 0 auto;
+            padding: 0 16px; /* чтобы не было впритык слева/справа */
+        }
+/* Центрируем "Наши услуги" — это первый h2 внутри .container */
+        .container > h2:first-of-type {
+            text-align: center;
+        }
+
+        /* Отступ слева для всех секций "Прайс-лист..." и блока Контакты */
+        .price-section,
+        .contacts {
+            padding-left: 16px; /* дополнительный левый отступ */
+        }
 
