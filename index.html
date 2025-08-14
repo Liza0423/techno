@@ -269,6 +269,26 @@
         .map-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 
 </style>
+     <style>
+        /* Общий контейнер контента (не трогаем .header) */
+        .container {
+            width: min(1200px, 92%);
+            margin: 0 auto;
+            padding: 0 16px; /* чтобы не было впритык слева/справа */
+        }
+
+        /* Центрируем "Наши услуги" — это первый h2 внутри .container */
+        .container > h2:first-of-type {
+            text-align: center;
+        }
+
+        /* Отступ слева для всех секций "Прайс-лист..." и блока Контакты */
+        .price-section,
+        .contacts {
+            padding-left: 16px; /* дополнительный левый отступ */
+        }
+    </style>
+
 </head>
 <body>
     <header class="header">
@@ -367,15 +387,15 @@
                 </tr>
                 <tr>
                     <td>Samsung (бюджетные модели)</td>
-                    <td>от 700</td>
+                    <td>от 500</td>
                 </tr>
                 <tr>
-                    <td>Samsung (A, S-серии, AMOLED)</td>
-                    <td>от 1200</td>
+                    <td>Samsung (S-серии, AMOLED)</td>
+                    <td>от 1000</td>
                 </tr>
                 <tr>
                     <td>Xiaomi/Redmi</td>
-                    <td>от 600</td>
+                    <td>от 500</td>
                 </tr>
                 <tr>
                     <td>Другие модели</td>
