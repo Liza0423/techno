@@ -112,7 +112,6 @@
             position: relative;
         }
         .phone-btn:hover { background-color: #e55c00; }
-       > Techno Doc:
 @media (max-width: 768px) {
             .header-container { flex-direction: column; gap: 15px; }
             .main-title { position: static; transform: none; order: 2; }
@@ -243,8 +242,6 @@
             margin: 0 auto;
             padding: 0 16px; /* чтобы не было впритык слева/справа */
         }
-
-> Techno Doc:
 /* Центрируем "Наши услуги" — это первый h2 внутри .container */
         .container > h2:first-of-type {
             text-align: center;
@@ -326,8 +323,6 @@
             <tr><td>iPhone</td><td>от 700</td></tr>
             <tr><td>Android</td><td>от 200</td></tr>
             <tr><td colspan="2"><strong>Замена кнопок (включения, громкости):</strong></td></tr>
-
-> Techno Doc:
 <tr><td>iPhone</td><td>от 500</td></tr>
             <tr><td>Android</td><td>от 400</td></tr>
             <tr><td colspan="2"><strong>Восстановление после попадания влаги:</strong></td></tr>
@@ -410,8 +405,6 @@
             const phone = document.getElementById('phone').value.trim();
 
             const message = 📞 Новый запрос на обратный звонок:\n\n👤 Имя: ${name}\n📱 Телефон: ${phone};
-
-> Techno Doc:
 fetch(https://api.telegram.org/bot${token}/sendMessage, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
