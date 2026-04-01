@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechnoDoc — Ремонт телефонів та ноутбуків у Харкові | Переклейка скла</title>
-    <meta name="description" content="Професійне відновлення дисплеїв iPhone, Samsung, Xiaomi у Харкові. Збереження оригінальних матриць. Переклейка скла за заводською технологією.">
+    <title>TechnoDoc - Сервісний центр у Харкові | Ремонт смартфонів, планшетів та ноутбуків</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
     <style>
         :root {
             --bg-dark: #0f172a; --card-bg: #1e293b; --primary: #3b82f6;
@@ -17,44 +15,47 @@
         header { padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(12px); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.05); }
         .logo { font-size: 1.1rem; font-weight: 700; color: var(--primary); letter-spacing: 1.5px; text-transform: uppercase; }
 
-        /* Переключатель языков */
-        .lang-switcher { display: flex; gap: 10px; }
-        .lang-btn { background: none; border: 1px solid rgba(255,255,255,0.2); color: var(--text-dim); padding: 4px 8px; border-radius: 4px; cursor: pointer; font-size: 0.75rem; transition: 0.3s; }
+        .lang-switcher { display: flex; gap: 8px; }
+        .lang-btn { background: none; border: 1px solid rgba(255,255,255,0.1); color: var(--text-dim); padding: 4px 10px; border-radius: 6px; cursor: pointer; font-size: 0.75rem; transition: 0.3s; }
         .lang-btn.active { border-color: var(--primary); color: #fff; background: rgba(59, 130, 246, 0.1); }
 
-        .hero { padding: 80px 5% 40px; text-align: center; }
-        .hero h1 { font-size: 2.3rem; font-weight: 700; margin-bottom: 20px; letter-spacing: -0.5px; }
-        .hero p { color: var(--text-dim); max-width: 650px; margin: 0 auto 35px; font-weight: 300; }
-
-        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+        .hero { padding: 100px 5% 60px; text-align: center; max-width: 900px; margin: 0 auto; }
+        .hero h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 20px; letter-spacing: -1px; line-height: 1.1; }
+        .hero p { color: var(--text-dim); font-size: 1.15rem; margin-bottom: 35px; font-weight: 300; line-height: 1.5; }
         
-        .section-title { text-align: left; margin: 60px 0 30px; font-size: 1.4rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--primary); display: flex; align-items: center; }
-        .section-title::after { content: ''; height: 1px; background: rgba(255,255,255,0.1); flex-grow: 1; margin-left: 20px; }
+        .hero-features { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 40px; color: var(--primary); font-weight: 500; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+        .hero-features span::before { content: '•'; margin-right: 8px; opacity: 0.5; }
 
         .cta-buttons { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; }
-        .btn { padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: 0.3s; border: 1px solid transparent; }
+        .btn { padding: 14px 35px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: 0.3s; border: 1px solid transparent; }
         .btn-tg { background: var(--primary); color: #fff; }
         .btn-call { background: transparent; color: #fff; border-color: rgba(255,255,255,0.2); }
-        .btn:hover { transform: translateY(-2px); border-color: var(--primary); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(59, 130, 246, 0.2); border-color: var(--primary); }
 
-        .price-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .price-card { background: var(--card-bg); padding: 25px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.03); }
-        .price-card h3 { margin-top: 0; margin-bottom: 20px; font-size: 1rem; color: #fff; font-weight: 600; border-left: 3px solid var(--primary); padding-left: 15px; text-transform: uppercase; }
+        .container { max-width: 1050px; margin: 0 auto; padding: 20px; }
         
-        .price-item { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 0.85rem; }
-        .price-item span:last-child { font-weight: 600; color: var(--accent); }
+        .section-title { text-align: left; margin: 80px 0 35px; font-size: 1.3rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--primary); display: flex; align-items: center; }
+        .section-title::after { content: ''; height: 1px; background: rgba(255,255,255,0.07); flex-grow: 1; margin-left: 25px; }
 
-        .map-box { border-radius: 16px; overflow: hidden; height: 350px; border: 1px solid rgba(255,255,255,0.1); margin: 40px 0; }
+        .price-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 25px; }
+        .price-card { background: var(--card-bg); padding: 30px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.03); transition: 0.3s; }
+        .price-card:hover { border-color: rgba(59, 130, 246, 0.3); }
+        .price-card h3 { margin-top: 0; margin-bottom: 25px; font-size: 1rem; color: #fff; font-weight: 700; border-left: 4px solid var(--primary); padding-left: 15px; }
+        
+        .price-item { display: flex; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.04); font-size: 0.9rem; color: var(--text-main); }
+        .price-item span:last-child { font-weight: 700; color: var(--accent); white-space: nowrap; }
 
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.05); }
-        .info-block h4 { color: var(--primary); font-size: 0.75rem; text-transform: uppercase; margin-bottom: 12px; letter-spacing: 1px; }
-        .info-block p { font-size: 0.85rem; color: var(--text-dim); margin: 4px 0; }
+        .map-box { border-radius: 20px; overflow: hidden; height: 450px; border: 1px solid rgba(255,255,255,0.05); margin: 50px 0; }
 
-        footer { text-align: center; padding: 30px; color: #475569; font-size: 0.75rem; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; padding: 60px 0; border-top: 1px solid rgba(255,255,255,0.05); }
+        .info-block h4 { color: var(--primary); font-size: 0.8rem; text-transform: uppercase; margin-bottom: 15px; letter-spacing: 1.5px; }
+        .info-block p { font-size: 0.9rem; color: var(--text-dim); margin: 6px 0; }
 
-        @media (max-width: 600px) {
-            .hero h1 { font-size: 1.7rem; }
-            header { flex-direction: column; gap: 10px; }
+        footer { text-align: center; padding: 40px; color: #334155; font-size: 0.8rem; font-weight: 500; border-top: 1px solid rgba(255,255,255,0.02); }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            header { flex-direction: column; gap: 15px; text-align: center; }
         }
     </style>
 </head>
@@ -69,60 +70,70 @@
 </header>
 
 <section class="hero">
-    <h1 id="hero-title">Переклейка скла дисплея</h1>
-    <p id="hero-desc">Відновлення екранів за заводською технологією ОСА. Зберігаємо оригінальну матрицю та передачу кольорів. У 2 рази дешевше за заміну модуля.</p>
+    <h1 id="hero-title">Ваша техніка у надійних руках</h1>
+    <p id="hero-desc">Ми - професійний сервіс у Харкові, де повертають до життя смартфони, планшети, ноутбуки та комп'ютери. Якісні комплектуючі та гарантія на кожну роботу.</p>
+    
+    <div class="hero-features">
+        <span id="feat-phones">Смартфони</span>
+        <span id="feat-tablets">Планшети</span>
+        <span id="feat-laptops">Ноутбуки</span>
+        <span id="feat-pc">Комп'ютери</span>
+    </div>
+
     <div class="cta-buttons">
-        <a href="https://t.me/techno_doc_kh" class="btn btn-tg" id="btn-tg">Написати в Telegram</a>
+        <a href="https://t.me/Techno_doc_kh" class="btn btn-tg" id="btn-tg">Написати в Telegram</a>
         <a href="tel:+380939866841" class="btn btn-call" id="btn-call">Зателефонувати</a>
     </div>
 </section>
 
 <div class="container">
     
-    <div class="section-title" id="title-glass">Переклейка скла</div>
+    <div class="section-title" id="title-glass">Спеціалізація: Переклейка скла</div>
     <div class="price-grid">
         <div class="price-card">
-            <h3>Android (Усі бренди)</h3>
-            <div class="price-item"><span>Xiaomi / Redmi / Poco</span> <span>від 800 грн</span></div>
-            <div class="price-item"><span>Samsung (A / M / J серії)</span> <span>від 1000 грн</span></div>
-            <div class="price-item"><span>Samsung (S / Note серії)</span> <span>від 1300 грн</span></div>
-            <div class="price-item"><span>Realme / Oppo / Motorola</span> <span>від 800 грн</span></div>
+            <h3 id="title-android">Android (Всі бренди)</h3>
+            <div class="price-item"><span>Xiaomi / Redmi / Poco</span> <span class="p-val">від 800 грн</span></div>
+            <div class="price-item"><span>Samsung (A / M / J серії)</span> <span class="p-val">від 1000 грн</span></div>
+            <div class="price-item"><span>Samsung (S / Note серії)</span> <span class="p-val">від 1400 грн</span></div>
+            <div class="price-item"><span>Realme / Oppo / Motorola</span> <span class="p-val">від 800 грн</span></div>
         </div>
         <div class="price-card">
             <h3 id="title-iphone-old">iPhone (Класика)</h3>
-            <div class="price-item"><span>iPhone 7 / 8 / SE 2/3</span> <span>800 грн</span></div>
+            <div class="price-item"><span>iPhone 7 / 8 / SE 2/3</span> <span>800 - 1000 грн</span></div>
             <div class="price-item"><span>iPhone X / XR / 11</span> <span>1100 - 1300 грн</span></div>
             <div class="price-item"><span>iPhone 11 Pro / 11 Pro Max</span> <span>1500 грн</span></div>
             <div class="price-item"><span>iPhone 12 / 12 Pro / 12 mini</span> <span>2100 грн</span></div>
         </div>
         <div class="price-card">
             <h3 id="title-iphone-new">iPhone (Актуальні)</h3>
-            <div class="price-item"><span>iPhone 13 / 13 Pro / 13 mini</span> <span>від 2600 грн</span></div>
-            <div class="price-item"><span>iPhone 14 / 14 Plus / 14 Pro</span> <span>від 3200 грн</span></div>
-            <div class="price-item"><span>iPhone 15 / 15 Plus / 15 Pro</span> <span>від 4500 грн</span></div>
+            <div class="price-item"><span>iPhone 13 / 13 Pro / 13 mini</span> <span class="p-val">від 2600 грн</span></div>
+            <div class="price-item"><span>iPhone 14 / 14 Plus / 14 Pro</span> <span class="p-val">від 3200 грн</span></div>
+            <div class="price-item"><span>iPhone 15 / 15 Plus / 15 Pro</span> <span class="p-val">від 4500 грн</span></div>
             <div class="price-item"><span id="txt-faceid">Заміна Touch / Face ID</span> <span id="txt-indiv">індивідуально</span></div>
         </div>
     </div>
 
-    <div class="section-title" id="title-repair">Ремонт та обслуговування</div>
+    <div class="section-title" id="title-repair">Загальний ремонт</div>
     <div class="price-grid">
         <div class="price-card">
-            <h3 id="title-phones">Смартфони</h3>
-            <div class="price-item"><span id="txt-battery">Заміна акумулятора</span> <span>від 700 грн</span></div>
-            <div class="price-item"><span id="txt-port">Роз'єм зарядки</span> <span>від 500 грн</span></div>
-            <div class="price-item"><span id="txt-back">Заміна корпусу / скла кришки</span> <span>від 300 грн</span></div>
+            <h3 id="title-phones">Смартфони та Планшети</h3>
+            <div class="price-item"><span id="txt-battery">Заміна акумулятора</span> <span class="p-val">від 700 грн</span></div>
+            <div class="price-item"><span id="txt-port">Роз'єм зарядки</span> <span class="p-val">від 500 грн</span></div>
+            <div class="price-item"><span id="txt-back">Заміна корпусу / кришки</span> <span class="p-val">від 300 грн</span></div>
+            <div class="price-item"><span id="txt-tab">Ремонт планшетів (iPad/Android)</span> <span class="p-val">від 800 грн</span></div>
         </div>
         <div class="price-card">
-            <h3 id="title-laptops">Ноутбуки / ПК</h3>
-            <div class="price-item"><span id="txt-cleaning">Чистка + заміна пасти</span> <span>від 850 грн</span></div>
-            <div class="price-item"><span id="txt-metal">Обслуговування (Рідкий метал)</span> <span>2200 грн</span></div>
-            <div class="price-item"><span id="txt-pcbuild">Збірка та апгрейд ПК</span> <span>від 1000 грн</span></div>
+            <h3 id="title-laptops">Ноутбуки та ПК</h3>
+            <div class="price-item"><span id="txt-cleaning">Чистка + термопаста</span> <span class="p-val">від 850 грн</span></div>
+            <div class="price-item"><span id="txt-metal">Рідкий метал (обслуговування)</span> <span>2500 грн</span></div>
+            <div class="price-item"><span id="txt-os">Відновлення ОС / ПЗ</span> <span>700 грн</span></div>
+            <div class="price-item"><span id="txt-pcbuild">Збірка та апгрейд ПК</span> <span class="p-val">від 1000 грн</span></div>
         </div>
     </div>
 
-    <div class="section-title" id="title-loc">Локація</div>
+    <div class="section-title" id="title-loc">Наше розташування</div>
     <div class="map-box">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.4883109315875!2d36.33155857618032!3d50.02094247151323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a7605d8f287f%3A0xe54d6a666997d911!2z0YPQuy4g0JDQutCw0LTQtdC80LjQutCwINCf0LDQstC70L7QstCwLCAzMDcsINCl0LDRgNGM0LrQvtCyLCDQpdCw0YDRjNC60L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA2MTAwMA!5e0!3m2!1suk!2sua!4v1700000000000!5m2!1suk!2sua" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10253.978249673854!2d36.3315893!3d50.0208947!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a7509d3c5005%3A0xc474136979606869!2zVGVjaG5vRG9jIC0g0YHQtdGA0LLRltGB0L3QuNC5INGG0LXQvdGC0YAg0L_QviDRgNC10LzQvtC90YLRgyDRgtC10YXQvdGW0LrQuA!5e0!3m2!1suk!2sua!4v1711964200000!5m2!1suk!2sua" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
 
     <div class="footer-grid">
@@ -132,105 +143,89 @@
             <p id="txt-addr-sub">Зупинка трамвая "Студентська"</p>
         </div>
         <div class="info-block">
-            <h4 id="title-schedule">Графік</h4>
+            <h4 id="title-schedule">Робочі часи</h4>
             <p id="txt-days">Пн — Сб: 09:00 — 18:00</p>
             <p id="txt-sun">Неділя: Вихідний</p>
         </div>
         <div class="info-block">
-            <h4 id="title-contact">Зв'язок</h4>
+            <h4>TechnoDoc Online</h4>
             <p>+380 (93) 9866 841</p>
-            <p>technodoc.online</p>
+            <p>Ремонт з гарантією</p>
         </div>
     </div>
 </div>
 
-<footer id="footer-copy">© 2026 Technodoc. Професійний сервіс електроніки у Харкові.
-    Ціни вказані за роботу без урахування вартості запчастин.</footer>
+<footer id="footer-copy">© 2026 Technodoc. Якість, перевірена часом.</footer>
 
 <script>
 const translations = {
     ua: {
-        heroTitle: "Переклейка скла дисплея",
-        heroDesc: "Відновлення екранів за заводською технологією ОСА. Зберігаємо оригінальну матрицю та передачу кольорів. У 2 рази дешевше за заміну модуля.",
-        btnTg: "Написати в Telegram",
-        btnCall: "Зателефонувати",
-        titleGlass: "Переклейка скла",
-        titleIphoneOld: "iPhone (Класика)",
-        titleIphoneNew: "iPhone (Актуальні)",
-        txtFaceid: "Заміна Touch / Face ID",
-        txtIndiv: "індивідуально",
-        titleRepair: "Ремонт та обслуговування",
-        titlePhones: "Смартфони",
-        txtBattery: "Заміна акумулятора",
-        txtPort: "Роз'єм зарядки",
-        txtBack: "Заміна корпусу / скла кришки",
-        titleLaptops: "Ноутбуки / ПК",
-        txtCleaning: "Чистка + заміна пасти",
-        txtMetal: "Обслуговування (Рідкий метал)",
-        txtPcbuild: "Збірка та апгрейд ПК",
-        titleLoc: "Локація",
-        titleAddress: "Адреса",
-        txtAddrMain: "Харків, вул. Академіка Павлова 307",
-        txtAddrSub: "Зупинка трамвая 'Студентська'",
-        titleSchedule: "Графік",
-        txtDays: "Пн — Сб: 09:00 — 18:00",
-        txtSun: "Неділя: Вихідний",
-        titleContact: "Зв'язок",
-        footerCopy: "© 2026 Technodoc. Працюємо якісно."
+        heroTitle: "Ваша техніка у надійних руках",
+        heroDesc: "Ми — професійний сервіс у Харкові, де повертають до життя смартфони, планшети, ноутбуки та комп'ютери будь-якої складності. Якісні комплектуючі та гарантія на кожну роботу.",
+        featPhones: "Смартфони", featTablets: "Планшети", featLaptops: "Ноутбуки", featPc: "Комп'ютери",
+        btnTg: "Написати в Telegram", btnCall: "Зателефонувати",
+        titleGlass: "Спеціалізація: Переклейка скла",
+        titleAndroid: "Android (Всі бренди)", titleIphoneOld: "iPhone (Класика)", titleIphoneNew: "iPhone (Актуальні)",
+        txtFaceid: "Заміна Touch / Face ID", txtIndiv: "індивідуально",
+        titleRepair: "Загальний ремонт", titlePhones: "Смартфони та Планшети", titleLaptops: "Ноутбуки та ПК",
+        txtBattery: "Заміна акумулятора", txtPort: "Роз'єм зарядки", txtBack: "Заміна корпусу / кришки", 
+        txtTab: "Ремонт планшетів (iPad/Android)",
+        txtCleaning: "Чистка + термопаста", txtMetal: "Рідкий метал (обслуговування)", txtOs: "Встановлення ОС / ПЗ", txtPcbuild: "Збірка та апгрейд ПК",
+        titleLoc: "Наше розташування", titleAddress: "Адреса", txtAddrMain: "Харків, вул. Академіка Павлова 307", txtAddrSub: "Зупинка трамвая 'Студентська'",
+        titleSchedule: "Робочі часи", txtDays: "Пн — Сб: 09:00 — 18:00", txtSun: "Неділя: Вихідний",
+        footerCopy: "© 2026 Technodoc. Якість, перевірена часом.",
+        fromPrefix: "від"
     },
     ru: {
-        heroTitle: "Переклейка стекла дисплея",
-        heroDesc: "Восстановление экранов по заводской технологии ОСА. Сохраняем оригинальную матрицу и цветопередачу. В 2 раза дешевле замены модуля.",
-        btnTg: "Написать в Telegram",
-        btnCall: "Позвонить",
-        titleGlass: "Переклейка стекла",
-        titleIphoneOld: "iPhone (Классика)",
-        titleIphoneNew: "iPhone (Актуальные)",
-        txtFaceid: "Замена Touch / Face ID",
-        txtIndiv: "индивидуально",
-        titleRepair: "Ремонт и обслуживание",
-        titlePhones: "Смартфоны",
-        txtBattery: "Замена аккумулятора",
-        txtPort: "Разъем зарядки",
-        txtBack: "Замена корпуса / стекла крышки",
-        titleLaptops: "Ноутбуки / ПК",
-        txtCleaning: "Чистка + замена пасты",
-        txtMetal: "Обслуживание (Жидкий металл)",
-        txtPcbuild: "Сборка и апгрейд ПК",
-        titleLoc: "Локация",
-        titleAddress: "Адрес",
-        txtAddrMain: "Харьков, ул. Академика Павлова 307",
-        txtAddrSub: "Остановка трамвая 'Студенческая'",
-        titleSchedule: "График",
-        txtDays: "Пн — Сб: 09:00 — 18:00",
-        txtSun: "Воскресенье: Выходной",
-        titleContact: "Связь",
-        footerCopy: "© 2026 Technodoc.  Профессиональный сервис электроники в Харькове. Цены указаны за работу без учета стоимости запчастей."
+        heroTitle: "Ваша техника в надежных руках",
+        heroDesc: "Мы — профессиональный сервис в Харькове, где возвращают к жизни смартфоны, планшеты, ноутбуки и компьютеры любой сложности. Качественные комплектующие и гарантия на каждую работу.",
+        featPhones: "Смартфоны", featTablets: "Планшеты", featLaptops: "Ноутбуки", featPc: "Компьютеры",
+        btnTg: "Написать в Telegram", btnCall: "Позвонить",
+        titleGlass: "Специализация: Переклейка стекла",
+        titleAndroid: "Android (Все бренды)", titleIphoneOld: "iPhone (Классика)", titleIphoneNew: "iPhone (Актуальные)",
+        txtFaceid: "Замена Touch / Face ID", txtIndiv: "индивидуально",
+        titleRepair: "Общий ремонт", titlePhones: "Смартфоны и Планшеты", titleLaptops: "Ноутбуки и ПК",
+        txtBattery: "Замена аккумулятора", txtPort: "Разъем зарядки", txtBack: "Замена корпуса / крышки", 
+        txtTab: "Ремонт планшетов (iPad/Android)",
+        txtCleaning: "Чистка + термопаста", txtMetal: "Жидкий металл (обслуживание)", txtOs: "Установка ОС / ПО", txtPcbuild: "Сборка и апгрейд ПК",
+        titleLoc: "Наше расположение", titleAddress: "Адрес", txtAddrMain: "Харьков, ул. Академика Павлова 307", txtAddrSub: "Остановка трамвая 'Студенческая'",
+        titleSchedule: "График работы", txtDays: "Пн — Сб: 09:00 — 18:00", txtSun: "Воскресенье: Выходной",
+        footerCopy: "© 2026 Technodoc. Качество, проверенное временем.",
+        fromPrefix: "от"
     }
 };
 
 function setLang(lang) {
     document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
     document.querySelector(`button[onclick="setLang('${lang}')"]`).classList.add('active');
-
+    
     const t = translations[lang];
+    
+    // Текстовые блоки
     document.getElementById('hero-title').innerText = t.heroTitle;
     document.getElementById('hero-desc').innerText = t.heroDesc;
+    document.getElementById('feat-phones').innerText = t.featPhones;
+    document.getElementById('feat-tablets').innerText = t.featTablets;
+    document.getElementById('feat-laptops').innerText = t.featLaptops;
+    document.getElementById('feat-pc').innerText = t.featPc;
     document.getElementById('btn-tg').innerText = t.btnTg;
     document.getElementById('btn-call').innerText = t.btnCall;
     document.getElementById('title-glass').innerText = t.titleGlass;
+    document.getElementById('title-android').innerText = t.titleAndroid;
     document.getElementById('title-iphone-old').innerText = t.titleIphoneOld;
     document.getElementById('title-iphone-new').innerText = t.titleIphoneNew;
     document.getElementById('txt-faceid').innerText = t.txtFaceid;
     document.getElementById('txt-indiv').innerText = t.txtIndiv;
     document.getElementById('title-repair').innerText = t.titleRepair;
     document.getElementById('title-phones').innerText = t.titlePhones;
+    document.getElementById('title-laptops').innerText = t.titleLaptops;
     document.getElementById('txt-battery').innerText = t.txtBattery;
     document.getElementById('txt-port').innerText = t.txtPort;
     document.getElementById('txt-back').innerText = t.txtBack;
-    document.getElementById('title-laptops').innerText = t.titleLaptops;
+    document.getElementById('txt-tab').innerText = t.txtTab;
     document.getElementById('txt-cleaning').innerText = t.txtCleaning;
     document.getElementById('txt-metal').innerText = t.txtMetal;
+    document.getElementById('txt-os').innerText = t.txtOs;
     document.getElementById('txt-pcbuild').innerText = t.txtPcbuild;
     document.getElementById('title-loc').innerText = t.titleLoc;
     document.getElementById('title-address').innerText = t.titleAddress;
@@ -239,12 +234,17 @@ function setLang(lang) {
     document.getElementById('title-schedule').innerText = t.titleSchedule;
     document.getElementById('txt-days').innerText = t.txtDays;
     document.getElementById('txt-sun').innerText = t.txtSun;
-    document.getElementById('title-contact').innerText = t.titleContact;
     document.getElementById('footer-copy').innerText = t.footerCopy;
-    
+
+    // Массовая замена предлога "від/от" в ценах
+    document.querySelectorAll('.p-val').forEach(el => {
+        const currentText = el.innerText;
+        const price = currentText.replace('від ', '').replace('от ', '');
+        el.innerText = `${t.fromPrefix} ${price}`;
+    });
+
     document.documentElement.lang = lang;
 }
 </script>
-
 </body>
 </html>
