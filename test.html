@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>TechnoDoc — Ремонт телефонов и ноутбуков в Харькове | Переклейка стекла</title>
+    <meta name="description" content="Профессиональная переклейка стекла (refurbishing) в Харькове на м. Студенческая. Ремонт iPhone, Samsung, Xiaomi. Сохраняем оригинальные дисплеи! Ремонт ноутбуков и ПК.">
+    <meta name="keywords" content="переклейка стекла харьков, ремонт телефонов салтовка, замена стекла айфон харьков, ремонт ноутбуков студенческая, technodoc харьков, замена экрана samsung">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="TechnoDoc — Ремонт и переклейка стекла в Харькове">
+    <meta property="og:description" content="Замена стекла с сохранением оригинальной матрицы. Выгодно, быстро, качественно.">
+    <meta property="og:url" content="https://technodoc.online">
+    <meta property="og:type" content="website">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-dark: #0f172a; --card-bg: #1e293b; --primary: #3b82f6;
+            --accent: #10b981; --text-main: #f8fafc; --text-dim: #94a3b8;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-dark); color: var(--text-main); margin: 0; line-height: 1.6; }
+        
+        header { padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .logo { font-size: 1.4rem; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; }
+
+        .hero { padding: 60px 5% 30px; text-align: center; background: radial-gradient(circle at top, #1e3a8a 0%, #0f172a 80%); }
+        .hero h1 { font-size: 2.2rem; margin-bottom: 15px; color: #fff; }
+        .hero p { color: var(--text-dim); max-width: 700px; margin: 0 auto 25px; }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+        .section-title { text-align: center; margin: 50px 0 30px; font-size: 1.8rem; position: relative; padding-bottom: 10px; }
+        .section-title::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 60px; height: 3px; background: var(--primary); }
+
+        .price-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+        .price-card { background: var(--card-bg); padding: 25px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.05); transition: 0.3s; }
+        .price-card:hover { border-color: var(--primary); transform: translateY(-3px); }
+        .price-card h3 { color: var(--primary); margin-top: 0; margin-bottom: 20px; font-size: 1.2rem; }
+        
+        .price-item { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 0.95rem; }
+        .price-item span:last-child { font-weight: 700; color: var(--accent); white-space: nowrap; margin-left: 10px; }
+
+        .badge { background: var(--accent); color: #fff; font-size: 0.7rem; padding: 3px 8px; border-radius: 5px; margin-left: 10px; vertical-align: middle; }
+
+        /* БЛОК ОБРАТНОЙ СВЯЗИ */
+        .cta-box { background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%); padding: 40px; border-radius: 20px; text-align: center; margin: 60px 0; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+        .cta-box h2 { margin-top: 0; color: #fff; }
+        .cta-buttons { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin-top: 25px; }
+        .btn { padding: 14px 28px; border-radius: 10px; text-decoration: none; font-weight: 700; transition: 0.3s; display: inline-block; }
+        .btn-tg { background: #0088cc; color: #fff; }
+        .btn-call { background: var(--accent); color: #fff; }
+        .btn:hover { transform: scale(1.05); filter: brightness(1.1); }
+
+        /* КАРТА */
+        .map-wrapper { border-radius: 20px; overflow: hidden; height: 400px; border: 2px solid var(--card-bg); margin-bottom: 40px; }
+
+        .footer-info { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 50px; }
+        .info-item h4 { color: var(--primary); margin-bottom: 10px; }
+        footer { text-align: center; padding-bottom: 40px; color: var(--text-dim); font-size: 0.85rem; }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 1.8rem; }
+            .price-card { padding: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">TechnoDoc</div>
+    <div style="font-weight: 600;">Харьков, Салтовка</div>
+</header>
+
+<section class="hero">
+    <h1>Профессиональный ремонт дисплеев</h1>
+    <p>Специализируемся на переклейке стекла iPhone, Samsung и Xiaomi - cохраняем заводской оригинал!</p>
+    <div class="cta-buttons">
+        <a href="https://t.me/techno_doc_kh" class="btn btn-tg">Написать в Telegram</a>
+        <a href="tel:+380939866841" class="btn btn-call">Позвонить мастеру</a>
+    </div>
+</section>
+
+<div class="container">
+    
+    <h2 class="section-title">Переклейка стекла (Восстановление)<span class="badge">ВЫГОДНО</span></h2>
+    <div class="price-grid">
+        <div class="price-card" style="grid-column: 1 / -1; border: 1px solid var(--accent);">
+            <p style="margin: 0 0 20px 0; color: var(--accent); font-weight: 600;">🔥 Замена стекла дешевле замены всего модуля на 40-60%!</p>
+            <div class="price-item"><span>Xiaomi / Redmi (все плоские модели)</span> <span>от 1000 грн</span></div>
+            <div class="price-item"><span>Samsung A-серия (A32, A51, A52, A53 и др.)</span> <span>от 1200 грн</span></div>
+            <div class="price-item"><span>iPhone 11 / XR (сохранение TrueTone)</span> <span>от 1400 грн</span></div>
+            <div class="price-item"><span>iPhone 12 / 12 Pro (оригинальное стекло)</span> <span>от 1900 грн</span></div>
+            <div class="price-item"><span>Samsung S-серия (плоские экраны)</span> <span>от 1400 грн</span></div>
+        </div>
+    </div>
+
+    <h2 class="section-title">Ремонт смартфонов (Работа)</h2>
+    <div class="price-grid">
+        <div class="price-card">
+            <h3>Дисплеи и Модули</h3>
+            <div class="price-item"><span>Замена экрана iPhone</span> <span>от 800 грн</span></div>
+            <div class="price-item"><span>Замена экрана Android</span> <span>от 700 грн</span></div>
+            <div class="price-item"><span>Замена задней крышки</span> <span>от 300 грн</span></div>
+        </div>
+        <div class="price-card">
+            <h3>Компоненты</h3>
+            <div class="price-item"><span>Замена аккумулятора</span> <span>от 700 грн</span></div>
+            <div class="price-item"><span>Разъём зарядки (Type-C / Lightning)</span> <span>от 500 грн</span></div>
+            <div class="price-item"><span>Восстановление после воды</span> <span>от 900 грн</span></div>
+        </div>
+    </div>
+
+    <h2 class="section-title">Ноутбуки и Компьютеры</h2>
+    <div class="price-grid">
+        <div class="price-card">
+            <h3>Обслуживание</h3>
+            <div class="price-item"><span>Чистка + замена термопасты</span> <span>800 - 1200 грн</span></div>
+            <div class="price-item"><span>Обслуживание (Жидкий металл)</span> <span>до 2500 грн</span></div>
+            <div class="price-item"><span>Установка и настройка ОС</span> <span>700 грн</span></div>
+        </div>
+        <div class="price-card">
+            <h3>Ремонт</h3>
+            <div class="price-item"><span>Замена матрицы (экрана)</span> <span>800 грн</span></div>
+            <div class="price-item"><span>Восстановление корпуса/петель</span> <span>от 600 грн</span></div>
+            <div class="price-item"><span>Сборка системного блока</span> <span>1000 - 1200 грн</span></div>
+        </div>
+    </div>
+
+    <div class="cta-box">
+        <h2>Нужна консультация?</h2>
+        <p>Пришлите фото повреждения в мессенджер — ответим по стоимости за 5 минут.</p>
+        <div class="cta-buttons">
+            <a href="https://t.me/ваш_ник" class="btn btn-tg">Telegram</a>
+            <a href="viber://chat?number=+380939866841" class="btn btn-call">Viber</a>
+        </div>
+    </div>
+
+    <h2 class="section-title">Как нас найти</h2>
+    <div class="map-wrapper">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.882434685121!2d36.3312!3d49.99!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDnCsDU5JzI0LjAiTiAzNsKwMTknNTIuMyJF!5e0!3m2!1sru!2sua!4v1700000000000!5m2!1sru!2sua" 
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+    </div>
+
+    <div class="footer-info">
+        <div class="info-item">
+            <h4>📍 Адрес</h4>
+            <p>Харьков, ул. Академика Павлова 307<br>(ст.м. Студенческая, остановка трамвая)</p>
+        </div>
+        <div class="info-item">
+            <h4>⏰ Режим работы</h4>
+            <p>Понедельник — Суббота<br>09:00 — 18:00</p>
+        </div>
+        <div class="info-item">
+            <h4>📞 Контакты</h4>
+            <p>+380 (93) 9866 841
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 TechnoDoc Online. Профессиональный сервис электроники в Харькове.<br>
+    Цены указаны за работу без учета стоимости запчастей.</p>
+</footer>
+
+</body>
+</html>
