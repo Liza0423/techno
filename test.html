@@ -26,11 +26,51 @@
         .hero-features { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 40px; color: var(--primary); font-weight: 500; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
         .hero-features span::before { content: '•'; margin-right: 8px; opacity: 0.5; }
 
-        .cta-buttons { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; }
-        .btn { padding: 14px 35px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: 0.3s; border: 1px solid transparent; }
-        .btn-tg { background: var(--primary); color: #fff; }
-        .btn-call { background: transparent; color: #fff; border-color: rgba(255,255,255,0.2); }
-        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(59, 130, 246, 0.2); border-color: var(--primary); }
+        .cta-buttons { 
+            display: flex; 
+            flex-direction: column; /* На мобилках кнопки будут одна под другой — так удобнее */
+            gap: 15px; 
+            align-items: center; 
+            margin-top: 20px;
+        }
+
+        .btn { 
+            width: 100%; /* Кнопка на всю ширину контента для удобства нажатия */
+            max-width: 320px;
+            padding: 18px 20px; /* Больше отступов сверху и снизу */
+            border-radius: 12px; 
+            text-decoration: none; 
+            font-weight: 700; /* Жирный шрифт */
+            font-size: 1.1rem; /* Увеличенный размер текста */
+            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+            border: 2px solid transparent; /* Чуть толще рамка */
+            text-align: center;
+            letter-spacing: 0.5px;
+            box-sizing: border-box;
+        }
+
+        .btn-tg { 
+            background: var(--primary); 
+            color: #fff; 
+        }
+
+        .btn-call { 
+            background: transparent; 
+            color: #fff; 
+            border-color: rgba(255,255,255,0.3); 
+        }
+
+        .btn:hover { 
+            transform: translateY(-3px); 
+            box-shadow: 0 12px 24px rgba(59, 130, 246, 0.3); 
+            border-color: var(--primary); 
+        }
+
+        /* На больших экранах возвращаем их в один ряд */
+        @media (min-width: 600px) {
+            .cta-buttons { flex-direction: row; justify-content: center; }
+            .btn { width: auto; min-width: 240px; }
+        }
 
         .container { max-width: 1050px; margin: 0 auto; padding: 20px; }
         
@@ -191,7 +231,7 @@ const translations = {
         txtCleaning: "Чистка + термопаста", txtMetal: "Жидкий металл (обслуживание)", txtOs: "Установка ОС / ПО", txtPcbuild: "Сборка и апгрейд ПК",
         titleLoc: "Наше расположение", titleAddress: "Адрес", txtAddrMain: "Харьков, ул. Академика Павлова 307", txtAddrSub: "Остановка трамвая 'Студенческая'",
         titleSchedule: "График работы", txtDays: "Пн - Пт: 09:00 - 18:00", txtSun: "Суббота: 9:00 - 14:00",
-        footerCopy: "© 2026 Technodoc. Профессиональный сервис электроники в Харькове.<br> Цены указаны за работу без учета стоимости запчастей.",
+        footerCopy: "© 2026 Technodoc. Профессиональный сервис электроники в Харькове. Цены указаны за работу без учета стоимости запчастей.",
         fromPrefix: "от"
     }
 };
