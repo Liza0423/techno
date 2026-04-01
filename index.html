@@ -1,244 +1,291 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Профессиональный ремонт телефонов и компьютеров в Харькове. Гарантия, низкие цены, быстрый сервис. Быстрая диагностика, гарантия на все работы, доступные цены. Замена экранов, батарей, чистка ПК и ноутбуков">
-    <meta property="og:title" content="Ремонт техники в Харькове">
-    <meta property="og:image" content="https://technodoc.online/img/IMG_8889.PNG">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta name="google-site-verification" content="BhfF-N08XdJEw2hPyddXYrfqylx5yGHGjONXJKmxSTM">
-    <meta property="og:description" content="Профессиональный ремонт телефонов и компьютеров в Харькове. Быстро, с гарантией.">
-    <meta property="og:url" content="https://technodoc.online/">
-    <link rel="canonical" href="https://technodoc.online/">
-    <link rel="icon" href="/favicon.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <title>TechnoDoc - сервисный центр по ремонту компьютеров и телефонов | Харьков </title>
+    <title>TechnoDoc - Сервісний центр у Харкові | Ремонт смартфонів, планшетів та ноутбуків</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0f172a; --card-bg: #1e293b; --primary: #3b82f6;
+            --accent: #10b981; --text-main: #f1f5f9; --text-dim: #94a3b8;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-dark); color: var(--text-main); margin: 0; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        
+        header { padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(12px); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .logo { font-size: 1.1rem; font-weight: 700; color: var(--primary); letter-spacing: 1.5px; text-transform: uppercase; }
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z496LEV3XC"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-Z496LEV3XC');
-    </script>
+        .lang-switcher { display: flex; gap: 8px; }
+        .lang-btn { background: none; border: 1px solid rgba(255,255,255,0.1); color: var(--text-dim); padding: 4px 10px; border-radius: 6px; cursor: pointer; font-size: 0.75rem; transition: 0.3s; }
+        .lang-btn.active { border-color: var(--primary); color: #fff; background: rgba(59, 130, 246, 0.1); }
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Ремонт телефонов и компьютеров",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Харьков",
-        "addressRegion": "Харьковская область"
-      },
-      "telephone": "+380939866841",
-      "openingHours": "Mo-Su 09:00-19:00",
-      "priceRange": "₴200-₴2000"
-    }
-    </script>
+        .hero { padding: 100px 5% 60px; text-align: center; max-width: 900px; margin: 0 auto; }
+        .hero h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 20px; letter-spacing: -1px; line-height: 1.1; }
+        .hero p { color: var(--text-dim); font-size: 1.15rem; margin-bottom: 35px; font-weight: 300; line-height: 1.5; }
+        
+        .hero-features { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 40px; color: var(--primary); font-weight: 500; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+        .hero-features span::before { content: '•'; margin-right: 8px; opacity: 0.5; }
 
-    <link rel="stylesheet" href="styles.css">
-    
+        .cta-buttons { 
+            display: flex; 
+            flex-direction: column;
+            gap: 15px; 
+            align-items: center; 
+            margin-top: 20px;
+        }
+
+        .btn { 
+            width: 100%; /* Кнопка на всю ширину контента для удобства нажатия */
+            max-width: 320px;
+            padding: 18px 20px; /* Больше отступов сверху и снизу */
+            border-radius: 12px; 
+            text-decoration: none; 
+            font-weight: 700; /* Жирный шрифт */
+            font-size: 1.1rem; /* Увеличенный размер текста */
+            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+            border: 2px solid transparent; /* Чуть толще рамка */
+            text-align: center;
+            letter-spacing: 0.5px;
+            box-sizing: border-box;
+        }
+
+        .btn-tg { 
+            background: var(--primary); 
+            color: #fff; 
+        }
+
+        .btn-call { 
+            background: transparent; 
+            color: #fff; 
+            border-color: rgba(255,255,255,0.3); 
+        }
+
+        .btn:hover { 
+            transform: translateY(-3px); 
+            box-shadow: 0 12px 24px rgba(59, 130, 246, 0.3); 
+            border-color: var(--primary); 
+        }
+
+        /* На больших экранах возвращаем их в один ряд */
+        @media (min-width: 600px) {
+            .cta-buttons { flex-direction: row; justify-content: center; }
+            .btn { width: auto; min-width: 240px; }
+        }
+
+        .container { max-width: 1050px; margin: 0 auto; padding: 20px; }
+        
+        .section-title { text-align: left; margin: 80px 0 35px; font-size: 1.3rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--primary); display: flex; align-items: center; }
+        .section-title::after { content: ''; height: 1px; background: rgba(255,255,255,0.07); flex-grow: 1; margin-left: 25px; }
+
+        .price-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 25px; }
+        .price-card { background: var(--card-bg); padding: 30px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.03); transition: 0.3s; }
+        .price-card:hover { border-color: rgba(59, 130, 246, 0.3); }
+        .price-card h3 { margin-top: 0; margin-bottom: 25px; font-size: 1rem; color: #fff; font-weight: 700; border-left: 4px solid var(--primary); padding-left: 15px; }
+        
+        .price-item { display: flex; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.04); font-size: 0.9rem; color: var(--text-main); }
+        .price-item span:last-child { font-weight: 700; color: var(--accent); white-space: nowrap; }
+
+        .map-box { border-radius: 20px; overflow: hidden; height: 450px; border: 1px solid rgba(255,255,255,0.05); margin: 50px 0; }
+
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; padding: 60px 0; border-top: 1px solid rgba(255,255,255,0.05); }
+        .info-block h4 { color: var(--primary); font-size: 0.8rem; text-transform: uppercase; margin-bottom: 15px; letter-spacing: 1.5px; }
+        .info-block p { font-size: 0.9rem; color: var(--text-dim); margin: 6px 0; }
+
+        footer { text-align: center; padding: 40px; color: #334155; font-size: 0.8rem; font-weight: 500; border-top: 1px solid rgba(255,255,255,0.02); }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            header { flex-direction: column; gap: 15px; text-align: center; }
+        }
+    </style>
 </head>
 <body>
-    <header class="header">
-        <div class="lang-switch">
-    <a href="index_ua.html">UA</a> | 
-    <a href="index.html">RU</a>
+
+<header>
+    <div class="logo">TECHNODOC</div>
+    <div class="lang-switcher">
+        <button class="lang-btn active" onclick="setLang('ua')">UA</button>
+        <button class="lang-btn" onclick="setLang('ru')">RU</button>
+    </div>
+</header>
+
+<section class="hero">
+    <h1 id="hero-title">Бездоганна робота вашої електроніки</h1>
+    <p id="hero-desc">Професійне обслуговування та ремонт смартфонів і комп'ютерів у Харкові. Відновлюємо функціонал до заводських стандартів, використовуючи профільне обладнання та якісні комплектуючі.</p>
+    
+    <div class="hero-features">
+        <span id="feat-phones">Смартфони</span>
+        <span id="feat-tablets">Планшети</span>
+        <span id="feat-laptops">Ноутбуки</span>
+        <span id="feat-pc">Комп'ютери</span>
+    </div>
+
+    <div class="cta-buttons">
+        <a href="https://t.me/Techno_doc_kh" class="btn btn-tg" id="btn-tg">Написати в Telegram</a>
+        <a href="tel:+380939866841" class="btn btn-call" id="btn-call">Зателефонувати</a>
+    </div>
+</section>
+
+<div class="container">
+    
+    <div class="section-title" id="title-glass">Переклейка скла</div>
+    <div class="price-grid">
+        <div class="price-card">
+            <h3 id="title-android">Android (Всі бренди)</h3>
+            <div class="price-item"><span>Xiaomi / Redmi / Poco</span> <span class="p-val">від 800 грн</span></div>
+            <div class="price-item"><span>Samsung (A / M / J серії)</span> <span class="p-val">від 1000 грн</span></div>
+            <div class="price-item"><span>Samsung (S / Note серії)</span> <span class="p-val">від 1400 грн</span></div>
+            <div class="price-item"><span>Realme / Oppo / Motorola</span> <span class="p-val">від 800 грн</span></div>
+        </div>
+        <div class="price-card">
+            <h3 id="title-iphone-old">iPhone (Класика)</h3>
+            <div class="price-item"><span>iPhone 7 / 8 / SE 2/3</span> <span>800 - 1000 грн</span></div>
+            <div class="price-item"><span>iPhone X / XR / 11</span> <span>1100 - 1300 грн</span></div>
+            <div class="price-item"><span>iPhone 11 Pro / 11 Pro Max</span> <span>1500 грн</span></div>
+            <div class="price-item"><span>iPhone 12 / 12 Pro / 12 mini</span> <span>2100 грн</span></div>
+        </div>
+        <div class="price-card">
+            <h3 id="title-iphone-new">iPhone (Актуальні)</h3>
+            <div class="price-item"><span>iPhone 13 / 13 Pro / 13 mini</span> <span class="p-val">від 2600 грн</span></div>
+            <div class="price-item"><span>iPhone 14 / 14 Plus / 14 Pro</span> <span class="p-val">від 3200 грн</span></div>
+            <div class="price-item"><span>iPhone 15 / 15 Plus / 15 Pro</span> <span class="p-val">від 4500 грн</span></div>
+            <div class="price-item"><span id="txt-faceid">Заміна Touch / Face ID</span> <span id="txt-indiv">індивідуально</span></div>
+        </div>
+    </div>
+
+    <div class="section-title" id="title-repair">Загальний ремонт</div>
+    <div class="price-grid">
+        <div class="price-card">
+            <h3 id="title-phones">Смартфони та Планшети</h3>
+            <div class="price-item"><span id="txt-battery">Заміна акумулятора</span> <span class="p-val">від 700 грн</span></div>
+            <div class="price-item"><span id="txt-port">Роз'єм зарядки</span> <span class="p-val">від 500 грн</span></div>
+            <div class="price-item"><span id="txt-back">Заміна корпусу / кришки</span> <span class="p-val">від 300 грн</span></div>
+            <div class="price-item"><span id="txt-tab">Ремонт планшетів (iPad/Android)</span> <span class="p-val">від 800 грн</span></div>
+        </div>
+        <div class="price-card">
+            <h3 id="title-laptops">Ноутбуки та ПК</h3>
+            <div class="price-item"><span id="txt-cleaning">Чистка + термопаста</span> <span class="p-val">від 850 грн</span></div>
+            <div class="price-item"><span id="txt-metal">Рідкий метал (обслуговування)</span> <span>2500 грн</span></div>
+            <div class="price-item"><span id="txt-os">Відновлення ОС / ПЗ</span> <span>700 грн</span></div>
+            <div class="price-item"><span id="txt-pcbuild">Збірка та апгрейд ПК</span> <span class="p-val">від 1000 грн</span></div>
+        </div>
+    </div>
+
+    <div class="section-title" id="title-loc">Наше розташування</div>
+    <div class="map-box">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.6745480328786!2d36.32492645433627!3d50.01745494522744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a7bf33e73fdd%3A0x66023d01e442f8d9!2sTechno%20Doc!5e0!3m2!1suk!2sua!4v1775031102719!5m2!1suk!2sua" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <div class="footer-grid">
+        <div class="info-block">
+            <h4 id="title-address">Адреса</h4>
+            <p id="txt-addr-main">Харків, вул. Академіка Павлова 307</p>
+            <p id="txt-addr-sub">Зупинка трамвая "Студентська"</p>
+        </div>
+        <div class="info-block">
+            <h4 id="title-schedule">Робочі часи</h4>
+            <p id="txt-days">Пн - Пт: 09:00 - 18:00</p>
+            <p id="txt-sun">Сб: 9:00 - 14:00</p>
+        </div>
+        <div class="info-block">
+            <h4>TechnoDoc Online</h4>
+            <p>+380 (93) 9866 841</p>
+            <p>Ремонт з гарантією</p>
+        </div>
+    </div>
 </div>
-        <div class="header-container">
-            <div class="center-logo-title">
-                <img src="img/IMG_8889.PNG" alt="Логотип сервисного центра" class="logo-img">
-            </div>
-            <h1 class="main-title">Ремонт компьютеров и телефонов в Харькове</h1>
-            <a href="tel:+380939866841" class="phone-btn">Позвонить сейчас</a>
-        </div>
-    </header>
 
-    <div class="container">
-        <h2>Наши услуги</h2>
-        <div class="services">
-            <div class="service">
-                <h3>Ремонт телефонов</h3>
-                <p>Замена экрана, батареи, разъема, восстановление после воды</p>
-            </div>
-            <div class="service">
-                <h3>Ремонт компьютеров</h3>
-                <p>Чистка, замена комплектующих, диагностика, настройка</p>
-            </div>
-            <div class="service">
-                <h3>Восстановление данных</h3>
-                <p>Спасаем информацию с поврежденных устройств</p>
-            </div>
-        </div>
-    </div>
+<footer id="footer-copy">© 2026 TechnoDoc. Професійний сервіс електроніки у Харкові.<br>
+    Ціни вказані за роботу без урахування вартості запчастин.</footer>
 
-    <!-- Прайс на ноутбуки -->
-    <div class="price-section">
-        <h2 class="price-title">Прайс-лист (ноутбуки)</h2>
-        <table class="price-table">
-            <tr><th>Услуга</th><th>Стоимость</th></tr>
-            <tr><td>Обслуживание</td><td>от 600 до 1000</td></tr>
-            <tr><td>Обслуживание ноутбуков с жидким металлом</td><td>до 2000</td></tr>
-            <tr><td>Восстановление ОС</td><td>500</td></tr>
-            <tr><td>Замена SSD/HDD</td><td>от 200 до 400</td></tr>
-            <tr><td>Замена кулеров/системы охлаждения + обслуживание</td><td>от 900 до 1200</td></tr>
-            <tr><td>Восстановление петель</td><td>от 400 до 800</td></tr>
-            <tr><td>Замена батареи</td><td>от 100 до 300</td></tr>
-            <tr><td>Замена клавиатуры (без разборки/с разборкой/с расклепкой)</td><td>200/400/600</td></tr>
-            <tr><td>Замена матрицы/шлейфа</td><td>600</td></tr>
-            <tr><td>Установка драйверов</td><td>200</td></tr>
-        </table>
-        <p class="note">* Стоимость указана без учета запчастей</p>
-    </div>
-
-    <!-- Прайс на телефоны -->
-    <div class="price-section">
-        <h2 class="price-title">Прайс-лист (телефоны)</h2>
-        <table class="price-table">
-            <tr><th>Услуга</th><th>Стоимость</th></tr>
-            <tr><td colspan="2"><strong>Замена дисплея:</strong></td></tr>
-            <tr><td>iPhone</td><td>от 500 до 1500</td></tr>
-            <tr><td>Samsung (бюджетные модели)</td><td>от 500</td></tr>
-            <tr><td>Samsung (S-серии, AMOLED)</td><td>от 1000</td></tr>
-            <tr><td>Xiaomi/Redmi</td><td>от 500</td></tr>
-            <tr><td>Другие модели</td><td>от 400 до 1000</td></tr>
-            <tr><td colspan="2"><strong>Замена задней крышки:</strong></td></tr>
-            <tr><td>Задняя крышка (с переклейкой)</td><td>от 100</td></tr>
-            <tr><td>Замена корпуса в сборе</td><td>от 500</td></tr>
-            <tr><td colspan="2"><strong>Замена аккумулятора:</strong></td></tr>
-            <tr><td>iPhone</td><td>от 600</td></tr>
-            <tr><td>Android</td><td>от 500</td></tr>
-            <tr><td colspan="2"><strong>Замена разъёма зарядки:</strong></td></tr>
-            <tr><td>iPhone</td><td>от 700</td></tr>
-            <tr><td>Android</td><td>от 200</td></tr>
-            <tr><td colspan="2"><strong>Замена кнопок (включения, громкости):</strong></td></tr>
-<tr><td>iPhone</td><td>от 500</td></tr>
-            <tr><td>Android</td><td>от 400</td></tr>
-            <tr><td colspan="2"><strong>Восстановление после попадания влаги:</strong></td></tr>
-            <tr><td>от 700 (в зависимости от степени повреждения)</td><td></td></tr>
-        </table>
-        <p class="note">* Цены указаны за работу без учета стоимости запчастей</p>
-    </div>
-
-    <!-- Прайс на ПК -->
-    <div class="price-section">
-        <h2 class="price-title">Прайс-лист (компьютеры)</h2>
-        <table class="price-table">
-            <tr><th>Услуга</th><th>Стоимость</th></tr>
-            <tr><td>Сборка ПК</td><td>от 800 до 1000</td></tr>
-            <tr><td>Восстановление ОС</td><td>500</td></tr>
-            <tr><td>Чистка</td><td>от 600 до 800</td></tr>
-            <tr><td>Ремонт системы охлаждения</td><td>от 400</td></tr>
-            <tr><td>Установка/замена SSD/HDD</td><td>200</td></tr>
-            <tr><td>Замена блока питания</td><td>до 600</td></tr>
-            <tr><td>Замена батарейки BIOS</td><td>200</td></tr>
-            <tr><td>Установка/замена процессора</td><td>400</td></tr>
-            <tr><td>Апгрейд ПК</td><td>400</td></tr>
-            <tr><td>Обслуживание видеокарты</td><td>до 400</td></tr>
-        </table>
-    </div>
-
-    <h2 class=why-us>Почему выбирают нас?</h2>
-    <ul>
-        <li>Быстрая диагностика и ремонт</li>
-        <li>Услуга доставки техники</li>
-        <li>Качественные комплектующие</li>
-        <li>Гарантия на все виды работ</li>
-        <li>Работаем по всей Украине</li>
-    </ul>
-
-    <div class="callback-form-section">
-        <h2 class="price-title">Заказать обратный звонок</h2>
-        <form class="callback-form">
-            <label for="name">Имя:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="phone">Телефон:</label>
-            <input type="tel" id="phone" name="phone" required pattern="[\d\+\-\s\(\)]+" placeholder="+380...">
-
-            <button type="submit">Отправить заявку</button>
-        </form>
-    </div>
-
-    <div class="contacts">
-        <h2>Контакты</h2>
-        <div class="social-links">
-            <a href="https://www.tiktok.com/@techno_doc" target="_blank" rel="noopener">TikTok</a>
-            <a href="https://www.instagram.com/techno_doc_kh" target="_blank" rel="noopener">Instagram</a>
-        </div>
-        <div class="contact-info">
-            <p><img src="/img/free-icon-telephone-5037686.png" alt="иконка телефона для связи"> Телефон: <a href="tel:+380939866841">+380 (93) 9866 841</a></p>
-            <p><img src="/img/free-icon-location-pin-3179068.png" alt="Маркер адреса"> Адрес ул. Академика Павлова 307 (ст.м. Студенческая, трамвайная остановка)</p>
-            <p><img src="/img/free-icon-time-1436743.png" alt="Иконка рабочего времени"> Часы работы: Пн-Сб 9:00-18:00</p>
-            <div class="map-wrap">
-                <iframe title="Карта с адресом сервисного центра" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d320.4589541219227!2d36.329588319811926!3d50.01750957778279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1749567310742!5m2!1sru!2sua" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-    </div>
-
-    <footer>
-        <div class="container">
-            <p>© 2024 Ваш сервис по ремонту. Все права защищены.</p>
-        </div>
-    </footer>
-
-    <script>
-        const form = document.querySelector('.callback-form');
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
-
-            const token = '8140518733:AAGJtgNw5nF9mCVC6-eODR0GrfLrZCOECcc';
-            const chatId = '6391932474';
-
-            const name = document.getElementById('name').value.trim();
-            const phone = document.getElementById('phone').value.trim();
-
-            const message = 📞 Новый запрос на обратный звонок:\n\n👤 Имя: ${name}\n📱 Телефон: ${phone};
-fetch(https://api.telegram.org/bot${token}/sendMessage, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ chat_id: chatId, text: message })
-            })
-            .then(response => {
-                if (response.ok) {
-                    alert('Заявка успешно отправлена!');
-                    form.reset();
-                } else {
-                    alert('Ошибка отправки. Попробуйте позже.');
-                }
-            })
-            .catch(error => {
-                alert('Ошибка подключения к Telegram.');
-                console.error(error);
-            });
-        });
-    </script>
-    <script>
-document.addEventListener("DOMContentLoaded", function() {
-    // Определяем язык браузера (первые 2 символа)
-    const userLang = navigator.language || navigator.userLanguage;
-    const langCode = userLang.slice(0, 2).toLowerCase();
-
-    // Если это украинский — идём на украинскую версию
-    if (langCode === "uk") {
-        if (!window.location.href.includes("index_ua.html")) {
-            window.location.href = "index_ua.html";
-        }
+<script>
+const translations = {
+    ua: {
+        heroTitle: "Бездоганна робота вашої електроніки",
+        heroDesc: "Професійне обслуговування та ремонт смартфонів і комп'ютерів у Харкові. Відновлюємо функціонал до заводських стандартів, використовуючи профільне обладнання та якісні комплектуючі.",
+        featPhones: "Смартфони", featTablets: "Планшети", featLaptops: "Ноутбуки", featPc: "Комп'ютери",
+        btnTg: "Написати в Telegram", btnCall: "Зателефонувати",
+        titleGlass: "Переклейка скла",
+        titleAndroid: "Android (Всі бренди)", titleIphoneOld: "iPhone (Класика)", titleIphoneNew: "iPhone (Актуальні)",
+        txtFaceid: "Заміна Touch / Face ID", txtIndiv: "індивідуально",
+        titleRepair: "Загальний ремонт", titlePhones: "Смартфони та Планшети", titleLaptops: "Ноутбуки та ПК",
+        txtBattery: "Заміна акумулятора", txtPort: "Роз'єм зарядки", txtBack: "Заміна корпусу / кришки", 
+        txtTab: "Ремонт планшетів (iPad/Android)",
+        txtCleaning: "Чистка + термопаста", txtMetal: "Рідкий метал (обслуговування)", txtOs: "Встановлення ОС / ПЗ", txtPcbuild: "Збірка та апгрейд ПК",
+        titleLoc: "Наше розташування", titleAddress: "Адреса", txtAddrMain: "Харків, вул. Академіка Павлова 307", txtAddrSub: "Зупинка трамвая 'Студентська'",
+        titleSchedule: "Робочі часи", txtDays: "Пн - Пт: 09:00 - 18:00", txtSun: "Сб: 9:00 - 14:00",
+        footerCopy: "© 2026 Technodoc.Професійний сервіс електроніки у Харкові. Ціни вказані за роботу без урахування вартості запчастин.",
+        fromPrefix: "від"
+    },
+    ru: {
+        heroTitle: "Безупречная работа вашей электроники",
+        heroDesc: "Профессиональное обслуживание и ремонт мобильных устройств и компьютеров в Харькове. Восстанавливаем функционал до заводских стандартов, используя профильное оборудование и качественные комплектующие.",
+        featPhones: "Смартфоны", featTablets: "Планшеты", featLaptops: "Ноутбуки", featPc: "Компьютеры",
+        btnTg: "Написать в Telegram", btnCall: "Позвонить",
+        titleGlass: "Переклейка стекла",
+        titleAndroid: "Android (Все бренды)", titleIphoneOld: "iPhone (Классика)", titleIphoneNew: "iPhone (Актуальные)",
+        txtFaceid: "Замена Touch / Face ID", txtIndiv: "индивидуально",
+        titleRepair: "Общий ремонт", titlePhones: "Смартфоны и Планшеты", titleLaptops: "Ноутбуки и ПК",
+        txtBattery: "Замена аккумулятора", txtPort: "Разъем зарядки", txtBack: "Замена корпуса / крышки", 
+        txtTab: "Ремонт планшетов (iPad/Android)",
+        txtCleaning: "Чистка + термопаста", txtMetal: "Жидкий металл (обслуживание)", txtOs: "Установка ОС / ПО", txtPcbuild: "Сборка и апгрейд ПК",
+        titleLoc: "Наше расположение", titleAddress: "Адрес", txtAddrMain: "Харьков, ул. Академика Павлова 307", txtAddrSub: "Остановка трамвая 'Студенческая'",
+        titleSchedule: "График работы", txtDays: "Пн - Пт: 09:00 - 18:00", txtSun: "Сб: 9:00 - 14:00",
+        footerCopy: "© 2026 Technodoc. Профессиональный сервис электроники в Харькове. Цены указаны за работу без учета стоимости запчастей.",
+        fromPrefix: "от"
     }
-    // Если это русский — идём на русскую версию
-    else if (langCode === "ru") {
-        if (!window.location.href.includes("index.html")) {
-            window.location.href = "index.html";
-        }
-    }
-});
+};
+
+function setLang(lang) {
+    document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelector(`button[onclick="setLang('${lang}')"]`).classList.add('active');
+    
+    const t = translations[lang];
+    
+    // Текстовые блоки
+    document.getElementById('hero-title').innerText = t.heroTitle;
+    document.getElementById('hero-desc').innerText = t.heroDesc;
+    document.getElementById('feat-phones').innerText = t.featPhones;
+    document.getElementById('feat-tablets').innerText = t.featTablets;
+    document.getElementById('feat-laptops').innerText = t.featLaptops;
+    document.getElementById('feat-pc').innerText = t.featPc;
+    document.getElementById('btn-tg').innerText = t.btnTg;
+    document.getElementById('btn-call').innerText = t.btnCall;
+    document.getElementById('title-glass').innerText = t.titleGlass;
+    document.getElementById('title-android').innerText = t.titleAndroid;
+    document.getElementById('title-iphone-old').innerText = t.titleIphoneOld;
+    document.getElementById('title-iphone-new').innerText = t.titleIphoneNew;
+    document.getElementById('txt-faceid').innerText = t.txtFaceid;
+    document.getElementById('txt-indiv').innerText = t.txtIndiv;
+    document.getElementById('title-repair').innerText = t.titleRepair;
+    document.getElementById('title-phones').innerText = t.titlePhones;
+    document.getElementById('title-laptops').innerText = t.titleLaptops;
+    document.getElementById('txt-battery').innerText = t.txtBattery;
+    document.getElementById('txt-port').innerText = t.txtPort;
+    document.getElementById('txt-back').innerText = t.txtBack;
+    document.getElementById('txt-tab').innerText = t.txtTab;
+    document.getElementById('txt-cleaning').innerText = t.txtCleaning;
+    document.getElementById('txt-metal').innerText = t.txtMetal;
+    document.getElementById('txt-os').innerText = t.txtOs;
+    document.getElementById('txt-pcbuild').innerText = t.txtPcbuild;
+    document.getElementById('title-loc').innerText = t.titleLoc;
+    document.getElementById('title-address').innerText = t.titleAddress;
+    document.getElementById('txt-addr-main').innerText = t.txtAddrMain;
+    document.getElementById('txt-addr-sub').innerText = t.txtAddrSub;
+    document.getElementById('title-schedule').innerText = t.titleSchedule;
+    document.getElementById('txt-days').innerText = t.txtDays;
+    document.getElementById('txt-sun').innerText = t.txtSun;
+    document.getElementById('footer-copy').innerText = t.footerCopy;
+
+    // Массовая замена предлога "від/от" в ценах
+    document.querySelectorAll('.p-val').forEach(el => {
+        const currentText = el.innerText;
+        const price = currentText.replace('від ', '').replace('от ', '');
+        el.innerText = `${t.fromPrefix} ${price}`;
+    });
+
+    document.documentElement.lang = lang;
+}
 </script>
 </body>
 </html>
